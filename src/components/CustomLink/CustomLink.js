@@ -8,7 +8,7 @@ function CustomLink({ children, to,}) {
     return (
       <div>
         <Link
-          style={{ margin: '5px', textDecoration: match ? "underline" : "none" }}
+          style={{ margin: '5px', textDecoration: match ? "underline" : "none", color: match ? 'cyan' : 'black' }}
           to={to}
           
         >

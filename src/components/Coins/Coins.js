@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Coin from '../Coin/Coin';
 
 const Coins = () => {
 
@@ -13,8 +14,10 @@ const Coins = () => {
     } , [])
 
     return (
-        <div>
-            <h2>This is Coins {coins.length} </h2>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center'>
+            {
+                coins.map(coin => <Coin key={coin.id} coin={coin} />)
+            }
         </div>
     );
 };
