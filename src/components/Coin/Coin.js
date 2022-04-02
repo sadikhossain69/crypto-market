@@ -1,10 +1,12 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 
 const Coin = ({ coin }) => {
   const { name, image, symbol } = coin;
   return (
     <>
+    <Fade left>
       <div className="shadow-lg rounded-2xl w-[250px] bg-white p-4">
         <Link to={`/coin-details/${coin.id}`}>
           <div className="gap-4 flex justify-between items-center">
@@ -24,6 +26,7 @@ const Coin = ({ coin }) => {
           </div>
         </Link>
       </div>
+    </Fade>
     </>
   );
 };
